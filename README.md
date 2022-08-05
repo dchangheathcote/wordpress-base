@@ -8,6 +8,7 @@ wordpress-base
 |--imgs
 |--inc
 |--js
+   scripts.js
 |--partials
    logo.php
 404.php

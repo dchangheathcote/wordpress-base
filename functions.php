@@ -72,7 +72,12 @@ add_action( 'wp_enqueue_scripts', 'base_remove_wp_block_library_css', 100 );
  * Init Theme
  */
 function init_the_world(){
-
+	// if(!is_admin()){
+	// 	//load jQuery for frontend - enforce load version 3.6.0
+	// 	wp_deregister_script('jquery');
+	// 	wp_register_script('jquery', '//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js', false, '3.6.0', true);
+	// 	wp_enqueue_script('jquery');
+	// }
 }
 add_action('init', 'init_the_world');
 
