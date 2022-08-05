@@ -1,2 +1,1 @@
-# wordpress-base
- 
+# Base Starter Theme for Wordpress
