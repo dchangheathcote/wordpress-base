@@ -9,18 +9,18 @@ wordpress-base
 |--inc
 |--js
 |--partials
-   |-logo.php
-|-404.php
-|-archive.php
-|-footer.php
-|-functions.php
-|-header.php
-|-index.php
-|-page-template.php
-|-page.php
-|-search-form.php
-|-search.php
-|-sidebar.php
-|-single.php
-|-styles.css
+   logo.php
+404.php
+archive.php
+footer.php
+functions.php
+header.php
+index.php
+page-template.php
+page.php
+search-form.php
+search.php
+sidebar.php
+single.php
+styles.css
 ```
