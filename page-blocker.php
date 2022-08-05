@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Page Template
+Template Name: Page Blocker
 */
 ?>
 <!DOCTYPE html>
