@@ -1,18 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title><?php echo (is_front_page()) ? 'Base ' . get_bloginfo('description') : wp_title(' ', false);?></title>
+<?php get_header(); ?>
 
-<?php wp_head(); ?>
-<link rel="stylesheet" type="text/css" href="<?php echo TEMPDIR; ?>/style.css?v=1.0">
-</head>
-<body <?php body_class(); ?>>
+<?php get_template_part('partials/logo') ?>
+
+<?php
+if ( have_posts() ) {
+
+    while ( have_posts() ){ the_post();
+?>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="entry-header">
+			<?php the_title( '<h1>', '</h1>' ); ?>
+
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<?php the_content(); ?>
+	</div><!-- .entry-content -->
 
 
-<?php wp_footer(); ?>
-<script type="text/javascript" src="<?php echo TEMPDIR; ?>/js/script.js?ver=1.0"></script>
-</body>
-</html>
+</article><!-- #post-<?php the_ID(); ?> -->
+<?php
+    }
+} else { ?>
+    <div>
+        <h2>no page</h2>
+    </div><!-- .no-search-results -->
+<?php
+}
+?>
+<?php get_footer(); ?>
